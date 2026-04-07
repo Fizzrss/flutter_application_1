@@ -38,19 +38,18 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
-    var pair = appState.current; // ← Add this.  
+    var pair = appState.current;
 
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,  // ← Add this.
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('A random AWESOME idea:'), // ← Example change.
-            BigCard(pair: pair), // ← Change to this.
-        
+            BigCard(pair: pair),
+            SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                appState.getNext(); // ← This instead of print().
+                appState.getNext();
               },
               child: Text('Next'),
             ),
