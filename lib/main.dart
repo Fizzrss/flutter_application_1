@@ -42,6 +42,7 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,  // ← Add this.
         children: [
           Text('A random AWESOME idea:'), // ← Example change.
           BigCard(pair: pair), // ← Change to this.
