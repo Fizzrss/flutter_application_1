@@ -78,8 +78,13 @@ class BigCard extends StatelessWidget {
       color: theme.colorScheme.primary, // ← And also this.
       child: Padding(
         padding: const EdgeInsets.all(20),
-        // ↓ Change this line.
-        child: Text(pair.asLowerCase, style: style),
+        
+        // ↓ Make the following change.
+        child: Text(
+          pair.asLowerCase,
+          style: style,
+          semanticsLabel: "${pair.first} ${pair.second}",
+        ),
       ),
     );
   }
